@@ -1,8 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-purejava,other,MerchantIndustryTypeHolder,559,0,4,0,16,0,6,0,4,0
-purejava,powermock,Employee,18,0,0,0,7,0,5,0,5,0
-purejava,powermock,EmployeeService,13,0,0,0,5,0,4,0,4,0
-purejava,powermock,EmployeeController,19,0,0,0,7,0,3,0,3,0
-purejava,DataStructure,Testing,19,0,0,0,7,0,3,0,3,0
-purejava,javaself,StreamDemo,116,0,4,0,13,0,6,0,4,0
-purejava,javaself,StreamDemo.Person,26,0,0,0,4,0,5,0,5,0

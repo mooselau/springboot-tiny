@@ -1,7 +1,0 @@
-demo/rabbitmq/RabbitMqServiceImpl.class
-demo/rabbitmq/RabbitMqController.class
-demo/rabbitmq/RabbitMqService.class
-demo/rabbitmq/RabbitMessageReceiver.class
-demo/configs/RabbitMqConfig.class
-Application.class
-demo/model/User.class
