@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "custom.property",
+      "type": "demo.properties.UserProperties",
+      "sourceType": "demo.properties.UserProperties"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MerchantIndustryTypeHolder.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">purejava</a> &gt; <a href="index.source.html" class="el_package">other</a> &gt; <span class="el_source">MerchantIndustryTypeHolder.java</span></div><h1>MerchantIndustryTypeHolder.java</h1><pre class="source lang-java linenums">package other;
+
+import java.util.Map;
+import java.util.TreeMap;
+
+public class MerchantIndustryTypeHolder {
+
+    private Map&lt;Integer, String&gt; industryType;
+
+<span class="nc" id="L10">    public MerchantIndustryTypeHolder() {</span>
+<span class="nc" id="L11">        industryType = new TreeMap&lt;&gt;();</span>
+<span class="nc" id="L12">        init();</span>
+<span class="nc" id="L13">        printn();</span>
+<span class="nc" id="L14">    }</span>
+
+    private void init() {
+<span class="nc" id="L17">        final String[][] rawList = {</span>
+                {&quot;4215&quot;, &quot;快递服务（空运、地面运输或海运）&quot;}, {&quot;4511&quot;, &quot;航空公司&quot;},
+                {&quot;4814&quot;, &quot;电信服务，包括本地和长途电话、信用卡电话、磁卡电话和传真&quot;}, {&quot;4816&quot;, &quot;计算机网络/信息服务&quot;},
+                {&quot;4900&quot;, &quot;公共事业（电力、煤气、自来水、清洁服务）&quot;}, {&quot;5065&quot;, &quot;电器零件和设备（批发商）&quot;},
+                {&quot;5111&quot;, &quot;文具、办公用品、复印纸和书写纸（批发商）&quot;}, {&quot;5251&quot;, &quot;五金商店&quot;},
+                {&quot;5311&quot;, &quot;百货商店&quot;}, {&quot;5398&quot;, &quot;大型企业批发&quot;},
+                {&quot;5399&quot;, &quot;其他综合零售(各类日用品)&quot;}, {&quot;5499&quot;, &quot;各类食品店及专门食品零售店&quot;},
+                {&quot;5641&quot;, &quot;婴儿、儿童服装店&quot;}, {&quot;5699&quot;, &quot;各类服装及饰物店&quot;},
+                {&quot;5714&quot;, &quot;帏帐、窗帘、室内装潢商店&quot;}, {&quot;5734&quot;, &quot;计算机软件商店&quot;},
+                {&quot;5912&quot;, &quot;药房、药店&quot;}, {&quot;5941&quot;, &quot;体育用品店&quot;},
+                {&quot;5942&quot;, &quot;书店&quot;}, {&quot;5992&quot;, &quot;花店&quot;},
+                {&quot;5998&quot;, &quot;其他批发商&quot;}, {&quot;6012&quot;, &quot;金融机构－商品和服务&quot;},
+                {&quot;6300&quot;, &quot;保险销售、保险业和保险金&quot;}, {&quot;7230&quot;, &quot;美容理发店&quot;},
+                {&quot;7299&quot;, &quot;未列入其他代码的其他个人服务&quot;}, {&quot;7375&quot;, &quot;信息检索服务&quot;},
+                {&quot;7379&quot;, &quot;未列入其他代码的计算机维护和修理服务&quot;}, {&quot;7399&quot;, &quot;未列入其他代码的商业服务&quot;},
+                {&quot;7922&quot;, &quot;戏剧制片（不含电影）、演出和票务&quot;}, {&quot;7993&quot;, &quot;电子游戏供给&quot;},
+                {&quot;7995&quot;, &quot;彩票销售&quot;}, {&quot;8062&quot;, &quot;公立医院&quot;},
+                {&quot;8220&quot;, &quot;普通高校（公立）&quot;}, {&quot;8299&quot;, &quot;其他学校和教育服务&quot;},
+                {&quot;8398&quot;, &quot;慈善和社会公益服务组织&quot;}, {&quot;8651&quot;, &quot;政治组织（政府机构）&quot;}
+        };
+
+<span class="nc bnc" id="L38" title="All 2 branches missed.">        for (String[] pair : rawList) {</span>
+<span class="nc" id="L39">            industryType.put(Integer.valueOf(pair[0]), pair[1]);</span>
+        }
+<span class="nc" id="L41">    }</span>
+
+    private void printn() {
+<span class="nc" id="L44">        System.out.printf(&quot;Size: %d %n&quot;, industryType.size());</span>
+<span class="nc bnc" id="L45" title="All 2 branches missed.">        for (Map.Entry&lt;Integer, String&gt; entry : industryType.entrySet()) {</span>
+<span class="nc" id="L46">            System.out.printf(&quot;Key: %d, Value: %s %n&quot;, entry.getKey(), entry.getValue());</span>
+<span class="nc" id="L47">        }</span>
+<span class="nc" id="L48">    }</span>
+
+    public static void main(String[] args) {
+<span class="nc" id="L51">        new MerchantIndustryTypeHolder();</span>
+<span class="nc" id="L52">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
