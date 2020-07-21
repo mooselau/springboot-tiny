@@ -23,6 +23,7 @@
         <module>springboot</module>
         <module>springboot_mq</module>
         <module>springboot_redis</module>
+        <module>springboot_configs</module>
     </modules>
 
     <properties>
