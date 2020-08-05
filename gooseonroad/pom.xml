@@ -24,6 +24,7 @@
         <module>springboot_mq</module>
         <module>springboot_redis</module>
         <module>springboot_configs</module>
+        <module>springboot_aop</module>
     </modules>
 
     <properties>
