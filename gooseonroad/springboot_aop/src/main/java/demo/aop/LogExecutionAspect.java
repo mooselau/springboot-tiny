@@ -1,8 +1,10 @@
 package demo.aop;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
 import lombok.extern.slf4j.Slf4j;
 
@@ -10,6 +12,11 @@ import lombok.extern.slf4j.Slf4j;
 @Aspect
 @Component
 public class LogExecutionAspect {
+
+    @Before("@annotation(LogExecution)")
+    public void loginExecutionBefore(JoinPoint jp) {
+        LOGGER.info("===> Before LogExecution {}", jp);
+    }
 
     @Around("@annotation(LogExecution)")
     public Object logExecution(ProceedingJoinPoint joinPoint) throws Throwable {
