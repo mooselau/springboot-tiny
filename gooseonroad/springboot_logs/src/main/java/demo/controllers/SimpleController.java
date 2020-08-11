@@ -17,4 +17,9 @@ public class SimpleController {
     public void demoLogging() {
         simpleService.simpleProcess();
     }
+
+    @GetMapping("/async")
+    public void demoAsyncLogging() {
+        simpleService.asyncProcess();
+    }
 }
