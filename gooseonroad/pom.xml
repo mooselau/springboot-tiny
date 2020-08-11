@@ -25,6 +25,7 @@
         <module>springboot_redis</module>
         <module>springboot_configs</module>
         <module>springboot_aop</module>
+        <module>springboot_logs</module>
     </modules>
 
     <properties>
