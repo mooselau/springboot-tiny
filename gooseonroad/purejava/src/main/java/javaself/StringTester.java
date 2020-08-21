@@ -13,6 +13,6 @@ public class StringTester {
         String str = "100010";
         Long l = 10000L;
         System.out.println(String.format("String(%d) is invalid, for value(%d)", l, l));
-        log.info("String({}) is invalid, for value(v{})", l, l);
+        LOGGER.info("String({}) is invalid, for value(v{})", l, l);
     }
 }

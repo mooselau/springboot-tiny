@@ -9,17 +9,9 @@ public class OtherTester {
         tester.entrypoint();
     }
     public void entrypoint() {
-        Condition conditionA = null;
-
-        if (conditionA != null && conditionA.getValue() != null) {
-            System.out.println(true);
-        } else {
-            System.out.println(false);
-        }
-    }
-
-    @Data
-    private class Condition {
-        private String value = "";
+        String val = "authflow/reset/pwd?token=${mail_token}&lang=${language}";
+        String v1 = val.replace("${mail_token}", "abcdefg");
+        String v2 = v1.replace("${language}", "zh-CN");
+        System.out.println("val: " + val + ", v1: " + v1 + ", v2: " + v2);
     }
 }

@@ -18,7 +18,7 @@ public class StreamDemo {
     }
 
     public void entrypoint() {
-        streamOnRegEx();
+                streamOnRegEx();
     }
 
     private void streamOnRegEx() {

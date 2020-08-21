@@ -13,7 +13,9 @@ public class ServiceInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(final HttpServletRequest request, final HttpServletResponse response, final Object handler)
             throws Exception {
         // fill request related info before processing
-        MDC.put("user_id", request.getHeader("userId"));
+        if (request.getHeader("userId") != null) {
+            MDC.put("user_id", request.getHeader("userId"));
+        }
         MDC.put("session_id", request.getHeader("sessionId"));
         MDC.put("request_id", request.getHeader("requestId"));
         return super.preHandle(request, response, handler);
