@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import demo.entity.Employee;
 
 @Repository
-public interface EmpolyeeRepository extends JpaRepository<Employee, Long> {
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
     List<Employee> findAllByCompanyId(Long companyId);
 
