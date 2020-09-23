@@ -10,7 +10,7 @@ public class OptionalDemo {
 
     private void entrypoint() throws Exception {
         Long num = null;
-        Optional<Long> opt = Optional.of(num);
+        Optional<Long> opt = Optional.ofNullable(num);
         Long ret = opt.orElseThrow(() -> new RuntimeException(""));
         System.out.println(ret);
     }

@@ -1,5 +1,13 @@
 package javaself;
 
+import static java.time.format.DateTimeFormatter.ISO_OFFSET_DATE_TIME;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.TimeZone;
+
+
 public class DateAndTime {
     public static void main(String[] args) {
         DateAndTime demo = new DateAndTime();
@@ -7,7 +15,23 @@ public class DateAndTime {
     }
 
     private void entrypoint() {
-        testZero();
+        testISO();
+    }
+
+    private void testISO() {
+        TimeZone tz = TimeZone.getTimeZone("UTC");
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'");
+        // Quoted "Z" to indicate UTC, no timezone offset
+        df.setTimeZone(tz);
+
+        LocalDateTime localDateTime = LocalDateTime.parse("2020-08-15T13:37:20.757+08:00", ISO_OFFSET_DATE_TIME);
+        System.out.println(localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
+        System.out.println(System.currentTimeMillis());
+
+//        localDateTime.format(df);
+//        LocalDate date = LocalDate.now();
+//        String nowAsISO = df.format(date);
+//        System.out.println(nowAsISO);
     }
 
     private void testZero() {
