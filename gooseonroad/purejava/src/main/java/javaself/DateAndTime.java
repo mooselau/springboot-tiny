@@ -3,8 +3,10 @@ package javaself;
 import static java.time.format.DateTimeFormatter.ISO_OFFSET_DATE_TIME;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.TimeZone;
 
 
@@ -27,6 +29,11 @@ public class DateAndTime {
         LocalDateTime localDateTime = LocalDateTime.parse("2020-08-15T13:37:20.757+08:00", ISO_OFFSET_DATE_TIME);
         System.out.println(localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
         System.out.println(System.currentTimeMillis());
+
+        /* DateTime and TimeMillis with Timezone */
+        long targetTime = 1597469840757L;
+        ZonedDateTime zonedDateTime = ZonedDateTime.ofInstant(Instant.ofEpochMilli(targetTime), ZoneId.of("Asia/Shanghai"));
+        System.out.println(zonedDateTime.format(ISO_OFFSET_DATE_TIME));
 
 //        localDateTime.format(df);
 //        LocalDate date = LocalDate.now();

@@ -35,4 +35,9 @@ public class StartPoint {
         System.out.println("Bye");
         System.exit(1);
     }
+
+    private void init() {
+
+    }
+
 }
