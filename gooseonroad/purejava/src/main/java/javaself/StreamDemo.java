@@ -18,7 +18,17 @@ public class StreamDemo {
     }
 
     public void entrypoint() {
-                streamOnRegEx();
+        testStreamOnFilter();
+    }
+
+    private void testStreamOnFilter() {
+        List<Person> list = Arrays.asList(new Person("Lily", 18), new Person("Tom", 20),
+                new Person("Jerry", 22));
+        list.stream().filter(person -> person.getName().equals("Tom")).findFirst()
+                .ifPresent(person -> person.setAge(28));
+        for (Person p : list) {
+            System.out.println("Person - Name: " + p.getName() + ", Age: " + p.getAge());
+        }
     }
 
     private void streamOnRegEx() {
