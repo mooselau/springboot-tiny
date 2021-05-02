@@ -15,10 +15,10 @@
     </parent>
 
     <modules>
-        <module>grpc_api</module>
-        <module>purejava</module>
-        <module>grpc_server</module>
+        <!-- module>grpc_api</module>
         <module>grpc_client</module>
+        <module>grpc_server</module -->
+        <module>purejava</module>
         <module>springboot_jpa_h2</module>
         <module>springboot</module>
         <module>springboot_mq</module>
